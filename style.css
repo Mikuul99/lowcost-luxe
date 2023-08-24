@@ -1,0 +1,378 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Orator Std';
+}
+
+/* HEADER SECTION */
+
+.header {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    padding-bottom: 150px;
+    position: relative;
+}
+
+.header img {
+    width: 20%;
+}
+
+.header p {
+    margin: 30px 0;
+}
+
+.header h1 {
+    font-weight: 500;
+}
+
+.nav {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 20px auto;
+    margin-top: 0;
+    background-color: white;
+    padding: 50px 0;
+}
+
+.nav .links {
+    padding: 20px;
+    margin: 0 30px;
+    color: black;
+    font-size: 24px;
+}
+
+.nav .links:hover {
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 960px) {
+ 
+    .header {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header img {
+        width: 50%;
+    }
+
+    .nav {
+        top: 0;
+        left: 0;
+        transform: none;
+        margin: 0;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .nav .links {
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+    }
+
+}
+
+/* Shopping and Retail Section */
+
+.S_R {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #f0abc8;
+}
+
+.S_R h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.S_R .shop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px auto;
+}
+
+.S_R .shop img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.S_R .shop .card {
+    max-width: 400px;
+    height: 500px;
+    border: 10px solid black;
+    position: relative;
+    cursor: pointer;
+}
+
+.S_R .shop .card p {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@media screen and (max-width: 960px) {
+
+    .S_R .shop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        margin: 20px auto;
+    }
+
+}
+
+/* About Us Section */
+
+.about_us {
+    width: 100%;
+    margin: 50px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.left {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    place-content: center;
+}
+
+.slideshow {
+    width: 500px;
+    overflow: hidden;
+    border: 5px solid black;
+  }
+  
+  .slideshow-container {
+    width: 1500px;
+    transition: 1s ease;
+    display: flex;
+  }
+  
+  .slideshow-container:hover {
+    animation-play-state: paused;
+  }
+  
+  .slideshow-container img {
+    width: 500px;
+    background-size: cover;
+  }
+
+  .slide {
+    animation: slide 24s ease infinite;
+}
+  
+@keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    
+    12.5% {
+      transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+    
+    40% {
+        transform: translateX(-33%);
+    }
+    
+    50% {
+        transform: translateX(-58%);
+    }
+
+    70% {
+        transform: translateX(-66%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.about_us .right {
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+}
+
+.about_us .right p {
+    margin: 30px 0;
+}
+
+@media screen and (max-width: 960px) {
+    
+    .about_us {
+        width: 100%;
+        margin: 30px auto;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slideshow {
+        height: 400px;
+    }
+
+    .right {
+        font-size: 20px;
+    }
+}
+
+/* Subscribe Section */
+
+.subscribe {
+    background-color: #f0abc8;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+
+.subscribe h1 {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form input[type="email"] {
+    width: 50%;
+    padding: 20px;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 40px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Orator Std';
+}
+
+.form #email::placeholder {
+    font-family: 'Orator Std';
+    text-align: center;
+    font-size: 20px;
+} 
+
+.form #form_btn {
+    width: 20%;
+    border: none;
+    outline: none;
+    background-color: #f0abc8;
+    padding: 20px;
+    font-size: 30px;
+    font-family: 'Orator Std';
+    cursor: pointer;
+}
+
+.form #form_btn:hover {
+    background-color: white;
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 960px) {
+
+    .subscribe h1 {
+        font-size: 30px;
+    }
+
+    .form input[type="email"] {
+        width: 70%;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .form #form_btn {
+        width: 50%;
+        padding: 10px;
+        font-size: 24px;
+    }
+}
+ 
+/* Footer Section */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 325px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 10px;
+    background-color: black;
+}
+
+.footer img {
+    width: 50px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.footer .copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.footer .copy img {
+    width: 30px;
+}
+
+@media screen and (max-width: 960px) {
+
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
